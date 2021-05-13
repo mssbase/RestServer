@@ -10,14 +10,12 @@ app.get('/testimonials', (req, res) => {
 });
 
 app.get('/testimonials/random', (req, res) => {
-    const id = Math.floor(Math.random() * db.length );
+    const id = Math.floor(Math.random() * db.length + 0 );
     res.redirect(`/testimonials/${id}`);
 });
 
-app.get('/testimonials/:id', (req, res) => {
-    const record = db.find((el) => el.id === req.params.id);
-    const text = record.text;
-    res.json(text);
+app.get('/testimonials/:id', (req,res) => {
+    res.json(db.find(item => item.id == req.params.id));
 });
 
 app.post('/testimonials', (req, res) => {
