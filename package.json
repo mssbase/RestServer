@@ -1,0 +1,16 @@
+{
+  "name": "RestApi",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/mssbase/RestServer.git",
+  "author": "Michal S <michalsienczuk@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx nodemon server.js",
+    "build": "cd client && yarn install && yarn build"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
